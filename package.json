@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SerhiyZv/ReadMe-generator#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "utils": "^0.3.1"
   }
 }
