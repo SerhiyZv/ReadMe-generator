@@ -2,7 +2,7 @@ const licensesLIst = [  //license array to build the badge icon
   { name: 'Apache License 2.0', abbr: 'Apache', url: 'https://opensource.org/licenses/Apache-2.0'},
   { name: 'BSD 3-Clause \'New\' or \'Revised\' license', abbr: 'BSD', url: 'https://opensource.org/licenses/BSD-3-Clause'},
   { name: 'BSD 2-Clause \'Simplified\' or \'FreeBSD\' license', abbr: 'BSD', url: 'https://opensource.org/licenses/BSD-2-Clause'},
-  { name: 'GNU General Public License (GPL)', abbr: 'GNU', url: 'GNU General Public License (GPL)'},
+  { name: 'GNU General Public License (GPL)', abbr: 'GNU', url: 'https://opensource.org/licenses/gpl-license'},
   { name: 'GNU Library or \'Lesser\' General Public License (LGPL)', abbr: 'GNU', url: 'https://opensource.org/licenses/lgpl-license'},
   { name: 'MIT license', abbr: 'MIT', url: 'https://opensource.org/licenses/MIT'},
   { name: 'Mozilla Public License 2.0', abbr: 'Mozilla', url: 'https://opensource.org/licenses/MPL-2.0'},
@@ -13,7 +13,7 @@ const licensesLIst = [  //license array to build the badge icon
 const findLicense = (license) => {
   for (selectedLicense of licensesLIst) {
     if (selectedLicense.name === license)
-    return lic;
+    return selectedLicense;
   }
 }
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -55,7 +55,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contribution)
-  * [Tests](#tests)
+  * [Tests](#test)
   * [License](#license)
   * [Contact Information]](#contact-information)
   
@@ -65,7 +65,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ## Contributing
+  ## Contribution
   ${data.contribution}
 
   ## Tests
@@ -78,8 +78,8 @@ function generateMarkdown(data) {
 
   ## Contact Information
   * GitHub: [${data.Github}](https://github.com/${data.Github})
-  * Email: [${data.Email}](mailto:${data.Email})
+  * Email: [${data.email}](mailto:${data.email})
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports.generateMarkdown = generateMarkdown;

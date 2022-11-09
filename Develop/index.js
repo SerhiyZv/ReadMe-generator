@@ -2,11 +2,12 @@
 const fs = require('fs');  
 const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
-const writeFileAsync = util.promisify(fs.watchFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 const inquirer =require('inquirer')
 
 // TODO: Create an array of questions for user input
-const questions = [
+const questions = () => {
+    return inquirer.prompt([
     {
         type: 'input',
         message: 'What is your project title?',
@@ -24,13 +25,18 @@ const questions = [
     },
     {
         type: 'editor',
-        name: 'usage',
         message: 'Enter usage instructions for your project.  Be sure to save before closing the editor when you are done.',
+        name: 'usage',
     },
     {
         type: 'editor',
-        name: 'contribution',
         message: 'Enter contribution guidelines for your project.  Be sure to save before closing the editor when you are done.',
+        name: 'contribution',
+    },
+    {
+        type: 'editor',
+        message: 'Enter test cases for your project.  Be sure to save before closing the editor when you are done.',
+        name: 'test',
     },
     {
         type: 'list',
@@ -46,23 +52,42 @@ const questions = [
           'Common Development and Distribution License', 
           'Eclipse Public License version 2.0'],
     },
-
-];
+    {
+        type: 'input',
+        message: 'Enter your GitHub Username.',
+        name: 'Github',
+    }, 
+    {
+        type: 'input',
+        message: 'Enter your email address.',
+        name: 'email',
+    },
+]);
+}
 
 // TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {
-    fs.writeFile(fileName, JSON.stringify(data), (err) => {
-        err ? console.error(err) : console.log("README created!");
-    })
-}
+const writeToFile = async (fileName, data) => {
+    try{
+        await writeFileAsync(fileName, data);
+        console.log('Your README.md is completed!');
+    } catch (err) {
+        console.log(err);
+        console.log('There was an error writing your file.');
+    }
+};
 
 // TODO: Create a function to initialize app
-const init = () => {
-    inquirer.prompt(questions).then((response) => {
-        console.log("Responses captured");
-        writeToFile("README.md", response);
-    })
-}
+const init = async () => {
+    console.log('Welcome to the README.md generator!');
+        try {
+            const answers = await questions();
+            const md = generateMarkdown.generateMarkdown(answers);
+            writeToFile('README.md', md);
+        } catch (err) {
+            console.log(err);
+            console.log('There was an error with user input');
+        }
+};
 
 // Function call to initialize app
 init();
