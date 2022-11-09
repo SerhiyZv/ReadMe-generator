@@ -35,4 +35,3 @@ Also users can contact me through email if they wish to provide any feedback or 
   ## Contact Information
   * GitHub: [SerhiyZv](https://github.com/SerhiyZv)
   * Email: [skiev31@gmail.com](mailto:skiev31@gmail.com)
-
