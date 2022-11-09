@@ -12,7 +12,7 @@
   * [Contributing](#contribution)
   * [Tests](#test)
   * [License](#license)
-  * [Contact Information]](#contact-information)
+  * [Contacts](#contacts)
   
   ## Installation
   Clone the repo to your local machine in Git OR download to your machine and extract files from .zip file. Then, install the Inquirer package using npm i command.
