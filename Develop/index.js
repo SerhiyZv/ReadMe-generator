@@ -80,8 +80,11 @@ const writeToFile = async (fileName, data) => {
 const init = async () => {
     console.log('Welcome to the README.md generator!');
         try {
+            //when user prompts are finished then return answers to answers array
             const answers = await questions();
+            //call the function in generateMarkdoen.js file to create the markdown for the readme file
             const md = generateMarkdown.generateMarkdown(answers);
+            //call the writeToFile function and pass it the name 'README.MD' and the completed markdown
             writeToFile('README.md', md);
         } catch (err) {
             console.log(err);

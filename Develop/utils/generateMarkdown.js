@@ -1,4 +1,5 @@
-const licensesLIst = [  //license array to build the badge icon
+//license array to build the badge icon
+const licensesLIst = [  
   { name: 'Apache License 2.0', abbr: 'Apache', url: 'https://opensource.org/licenses/Apache-2.0'},
   { name: 'BSD 3-Clause \'New\' or \'Revised\' license', abbr: 'BSD', url: 'https://opensource.org/licenses/BSD-3-Clause'},
   { name: 'BSD 2-Clause \'Simplified\' or \'FreeBSD\' license', abbr: 'BSD', url: 'https://opensource.org/licenses/BSD-2-Clause'},
@@ -10,6 +11,7 @@ const licensesLIst = [  //license array to build the badge icon
   { name: 'Eclipse Public License version 2.0', abbr: 'Eclipse', url: 'https://opensource.org/licenses/EPL-2.0'},
 ];
 
+//compare license selected by user and return the matching license from the above licensesLIst array
 const findLicense = (license) => {
   for (selectedLicense of licensesLIst) {
     if (selectedLicense.name === license)
