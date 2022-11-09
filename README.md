@@ -32,7 +32,10 @@ Also users can contact me through email if they wish to provide any feedback or 
 
   https://opensource.org/licenses/MIT
 
-  ## Contact Information
+  ## Contacts
   * GitHub: [SerhiyZv](https://github.com/SerhiyZv)
   * Email: [skiev31@gmail.com](mailto:skiev31@gmail.com)
 
+    ## Screenshots
+
+    ![Screenshot1](./Develop/assets/images/Readme-generator-sreenshot1.jpg)
