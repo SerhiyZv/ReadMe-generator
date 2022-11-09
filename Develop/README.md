@@ -9,10 +9,10 @@
 
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing](#contribution)
+  * [Contribution](#contribution)
   * [Tests](#test)
   * [License](#license)
-  * [Contact Information]](#contact-information)
+  * [Contacts]](#contacts)
   
   ## Installation
   Clone the repo to your local machine in Git OR download to your machine and extract files from .zip file. Then, install the Inquirer package using npm i command.
@@ -32,6 +32,6 @@ Also users can contact me through email if they wish to provide any feedback or 
 
   https://opensource.org/licenses/MIT
 
-  ## Contact Information
+  ## Contacts
   * GitHub: [SerhiyZv](https://github.com/SerhiyZv)
   * Email: [skiev31@gmail.com](mailto:skiev31@gmail.com)
