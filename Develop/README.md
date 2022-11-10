@@ -1,4 +1,4 @@
-# README generator
+# Readme-generator
 
   ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=brightgreen)
 
@@ -12,13 +12,14 @@
   * [Contribution](#contribution)
   * [Tests](#test)
   * [License](#license)
-  * [Contacts](#contacts)
+  * [Contacts]](#contacts)
   
   ## Installation
   Clone the repo to your local machine in Git OR download to your machine and extract files from .zip file. Then, install the Inquirer package using npm i command.
 
   ## Usage
   Run with Node.js – invoke in terminal using node index.js command.
+
 
   ## Contribution
   To contribute, fork the repository, add descriptive commits, and then open a pull request back to the original repo describing your proposed changes.
