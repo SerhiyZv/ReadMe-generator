@@ -36,10 +36,10 @@ Also users can contact me through email if they wish to provide any feedback or 
   * GitHub: [SerhiyZv](https://github.com/SerhiyZv)
   * Email: [skiev31@gmail.com](mailto:skiev31@gmail.com)
 
-    ## Screenshots
+  ## Screenshots
 
-    ![Screenshot1](./Develop/assets/images/Readme-generator-sreenshot1.jpg)
+  ![Screenshot1](./Develop/assets/images/Readme-generator-sreenshot1.jpg)
 
-    ## Video
-    
-    [Screencastify](https://drive.google.com/file/d/1VobH6xt-g_ziWsvJzN8LKW98IIBgAjQZ/view)
+  ## Video
+
+  [Screencastify](https://drive.google.com/file/d/1VobH6xt-g_ziWsvJzN8LKW98IIBgAjQZ/view)
