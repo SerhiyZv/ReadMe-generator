@@ -42,4 +42,8 @@ Also users can contact me through email if they wish to provide any feedback or 
 
   ## Video
 
-  [Screencastify](https://drive.google.com/file/d/1VobH6xt-g_ziWsvJzN8LKW98IIBgAjQZ/view)
+  [Screencastify-Video](https://drive.google.com/drive/folders/1hOviDKg7WC71v-RauDrUGg7HQ8xNx5Yk)
+
+  ## Link to the generated README file
+
+  [README](./Develop/README.md)

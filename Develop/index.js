@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application
+// Variables declaration
 const fs = require('fs');  
 const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown');
 const writeFileAsync = util.promisify(fs.writeFile);
 const inquirer =require('inquirer')
 
-// TODO: Create an array of questions for user input
+// Arrays declaration of questions for user input
 const questions = () => {
     return inquirer.prompt([
     {
@@ -14,28 +14,28 @@ const questions = () => {
         name: 'title'
     },
     {
-        type: 'editor',
-        message: 'Enter a description of your project.  Be sure to save before closing the editor when you are done.',
+        type: 'input',
+        message: 'Enter a description of your project.',
         name: 'description'
     },
     {
-        type: 'editor',
-        message: 'Enter installation instructions for your project.  Be sure to save before closing the editor when you are done.',
+        type: 'input',
+        message: 'Enter installation instructions for your project.',
         name: 'installation'
     },
     {
-        type: 'editor',
-        message: 'Enter usage instructions for your project.  Be sure to save before closing the editor when you are done.',
+        type: 'input',
+        message: 'Enter usage instructions for your project.',
         name: 'usage',
     },
     {
-        type: 'editor',
-        message: 'Enter contribution guidelines for your project.  Be sure to save before closing the editor when you are done.',
+        type: 'input',
+        message: 'Enter contribution guidelines for your project.',
         name: 'contribution',
     },
     {
-        type: 'editor',
-        message: 'Enter test cases for your project.  Be sure to save before closing the editor when you are done.',
+        type: 'input',
+        message: 'Enter test cases for your project.',
         name: 'test',
     },
     {
@@ -65,7 +65,7 @@ const questions = () => {
 ]);
 }
 
-// TODO: Create a function to write README file
+// writeToFile function to write README file
 const writeToFile = async (fileName, data) => {
     try{
         await writeFileAsync(fileName, data);
@@ -76,7 +76,7 @@ const writeToFile = async (fileName, data) => {
     }
 };
 
-// TODO: Create a function to initialize app
+// Initialization function
 const init = async () => {
     console.log('Welcome to the README.md generator!');
         try {

@@ -18,28 +18,28 @@ const findLicense = (license) => {
     return selectedLicense;
   }
 }
-// TODO: Create a function that returns a license badge based on which license is passed in
+// RenderLicenseBadge function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let selectedLicense = findLicense(license);
   return selectedLicense ? `![license](https://img.shields.io/static/v1?label=license&message=${selectedLicense.abbr}&color=brightgreen)` : '';
 }
 
-// TODO: Create a function that returns the license link
+// renderLicenseLink function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let selectedLicense = findLicense(license);
   return selectedLicense ? selectedLicense.url : '';
 }
 
-// TODO: Create a function that returns the license section of README
+// RenderLincenseSection function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let selectedLicense = findLicense(license);
   return selectedLicense ? `Licensed under ${selectedLicense.name}` : '';
 }
 
-// TODO: Create a function to generate markdown for README
+// generateMarkdown function to generate markdown for README
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
